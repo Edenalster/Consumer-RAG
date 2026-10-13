@@ -35,13 +35,25 @@ def check_robots(url: str) -> tuple[bool, str]:
     return ok, "allowed" if ok else "disallowed by robots.txt"
 
 
+INLINE_TAGS = ["a", "span", "b", "strong", "em", "i", "u", "abbr", "sup", "sub", "small", "mark", "cite", "time"]
+JUNK_SELECTORS = [".mw-editsection", ".toc", "#toc", "#catlinks", ".printfooter"]
+
+
 def extract_text(html: str) -> tuple[str, str]:
     soup = BeautifulSoup(html, "html.parser")
     title = soup.title.get_text(strip=True) if soup.title else ""
     for tag in soup(["script", "style", "nav", "header", "footer", "noscript", "form"]):
         tag.decompose()
     node = next((n for sel in CONTENT_SELECTORS if (n := soup.select_one(sel))), soup)
-    return title, clean_text(node.get_text("\n"))
+    for sel in JUNK_SELECTORS:
+        for tag in node.select(sel):
+            tag.decompose()
+    for h in node.find_all(["h2", "h3", "h4"]):
+        h.insert(0, "## ")              # mark section headings
+    for tag in node.find_all(INLINE_TAGS):
+        tag.unwrap()                    # keep links and bold text inside their sentence
+    node.smooth()                       # merge the split pieces back into one string
+    return title, clean_text(node.get_text("\n", strip=True))
 
 
 def main() -> None:

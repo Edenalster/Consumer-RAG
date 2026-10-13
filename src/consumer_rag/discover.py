@@ -1,3 +1,4 @@
+import hashlib
 import json
 import sys
 from urllib.parse import unquote, urljoin, urlparse
@@ -5,10 +6,10 @@ from urllib.parse import unquote, urljoin, urlparse
 import requests
 from bs4 import BeautifulSoup
 
-from .fetch import USER_AGENT, check_robots
+from .fetch import ROOT, USER_AGENT, check_robots
 
 
-def main(hub_url: str) -> None:
+def main(hub_url: str, keywords: list[str]) -> None:
     ok, reason = check_robots(hub_url)
     if not ok:
         print(f"Stopped: {reason}")
@@ -24,14 +25,21 @@ def main(hub_url: str) -> None:
         path = unquote(urlparse(href).path)
         if not path.startswith("/he/") or ":" in path or path == urlparse(hub_url).path:
             continue
-        seen.setdefault(href, a.get_text(strip=True))
+        title = a.get_text(strip=True)
+        if keywords and not any(k in title or k in path for k in keywords):
+            continue
+        seen.setdefault(unquote(href), title)
 
-    print(f"{len(seen)} candidates. Delete the lines you do not want, then paste into sources.json:\n")
-    for i, (url, title) in enumerate(seen.items(), 1):
-        entry = {"id": f"kz-{i:02d}", "title": title, "source": "Kol-Zchut",
-                 "license": "CC BY-NC-SA 2.5 IL", "url": unquote(url)}
+    existing = {unquote(s["url"]) for s in json.loads((ROOT / "sources.json").read_text(encoding="utf-8"))}
+    fresh = {u: t for u, t in seen.items() if u not in existing}
+    print(f"{len(fresh)} new candidates. Delete the lines you do not want, then paste into sources.json:\n")
+    for url, title in fresh.items():
+        entry = {"id": "kz-" + hashlib.sha1(url.encode()).hexdigest()[:6], "title": title,
+                 "source": "Kol-Zchut", "license": "CC BY-NC-SA 2.5 IL", "url": url}
         print(json.dumps(entry, ensure_ascii=False) + ",")
 
 
 if __name__ == "__main__":
-    main(sys.argv[1] if len(sys.argv) > 1 else "https://www.kolzchut.org.il/he/צרכנות")
+    hub = sys.argv[1] if len(sys.argv) > 1 else "https://www.kolzchut.org.il/he/צרכנות"
+    kws = [k for k in (sys.argv[2].split(",") if len(sys.argv) > 2 else []) if k]
+    main(hub, kws)

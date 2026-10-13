@@ -1,0 +1,3 @@
+{"q": "תוך כמה זמן אפשר להחזיר בגדים ולקבל כסף בחזרה?", "doc": "cancel-in-store", "phrase": "בתוך יומיים", "type": "direct"}
+{"q": "אפשר להחזיר בגד ים שקניתי?", "doc": "cannot-cancel", "phrase": "בגדי ים", "type": "direct"}
+{"q": "מה צריך להיות המחיר המינימלי של מוצר כדי שאוכל לבטל עסקה?", "doc": "cancel-in-store", "phrase": "50 ₪", "type": "direct"}
