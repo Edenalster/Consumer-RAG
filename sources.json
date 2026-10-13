@@ -1,0 +1,38 @@
+[
+  {
+    "id": "cannot-cancel",
+    "source": "Kol-Zchut",
+    "license": "CC BY-NC-SA 2.5 IL",
+    "url": "https://www.kolzchut.org.il/he/עסקה_צרכנית_שלא_ניתן_לבטל"
+  },
+  {
+    "id": "cancel-in-store",
+    "source": "Kol-Zchut",
+    "license": "CC BY-NC-SA 2.5 IL",
+    "url": "https://www.kolzchut.org.il/he/ביטול_רכישה_שנעשתה_בבית_העסק_והחזרת_המוצר"
+  },
+  {
+    "id": "cancel-ongoing",
+    "source": "Kol-Zchut",
+    "license": "CC BY-NC-SA 2.5 IL",
+    "url": "https://www.kolzchut.org.il/he/ביטול_עסקה_מתמשכת"
+  },
+  {
+    "id": "cancel-doorstep",
+    "source": "Kol-Zchut",
+    "license": "CC BY-NC-SA 2.5 IL",
+    "url": "https://www.kolzchut.org.il/he/ביטול_עסקה_ברוכלות"
+  },
+  {
+    "id": "consumer-law",
+    "source": "Kol-Zchut",
+    "license": "CC BY-NC-SA 2.5 IL",
+    "url": "https://www.kolzchut.org.il/he/חוק_הגנת_הצרכן"
+  },
+  {
+    "id": "consumer-authority",
+    "source": "Kol-Zchut",
+    "license": "CC BY-NC-SA 2.5 IL",
+    "url": "https://www.kolzchut.org.il/he/הרשות_להגנת_הצרכן_ולסחר_הוגן"
+  }
+]
