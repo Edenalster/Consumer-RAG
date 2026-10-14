@@ -34,5 +34,23 @@
     "source": "Kol-Zchut",
     "license": "CC BY-NC-SA 2.5 IL",
     "url": "https://www.kolzchut.org.il/he/הרשות_להגנת_הצרכן_ולסחר_הוגן"
+  },
+  {
+    "id": "cancel-online",
+    "source": "Kol-Zchut",
+    "license": "CC BY-NC-SA 2.5 IL",
+    "url": "https://www.kolzchut.org.il/he/ביטול_עסקה_שנעשתה_באינטרנט_או_בטלפון"
+  },
+  {
+    "id": "remote-sale",
+    "source": "Kol-Zchut",
+    "license": "CC BY-NC-SA 2.5 IL",
+    "url": "https://www.kolzchut.org.il/he/עסקת_מכר_מרחוק"
+  },
+  {
+    "id": "cancellation-fees",
+    "source": "Kol-Zchut",
+    "license": "CC BY-NC-SA 2.5 IL",
+    "url": "https://www.kolzchut.org.il/he/דמי_ביטול"
   }
 ]

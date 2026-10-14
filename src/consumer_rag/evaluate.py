@@ -11,11 +11,20 @@ def norm(s: str) -> str:
     return " ".join(s.split())
 
 
-def first_hit_rank(results: list[dict], doc: str, phrase: str):
-    """Rank (1-based) of the first retrieved chunk from the right page that contains the phrase."""
-    for i, r in enumerate(results, 1):
-        if r["meta"]["doc_id"] == doc and norm(phrase) in norm(r["text"]):
-            return i
+def first_hit_rank(results: list[dict], doc=None, phrase=None, relevant=None):
+    """Return the rank of the first relevant retrieved chunk."""
+
+    if relevant is None:
+        relevant = [{"doc": doc, "phrase": phrase}]
+
+    for i, result in enumerate(results, 1):
+        for target in relevant:
+            if (
+                result["meta"]["doc_id"] == target["doc"]
+                and norm(target["phrase"]) in norm(result["text"])
+            ):
+                return i
+
     return None
 
 
@@ -27,18 +36,50 @@ def summarize(ranks: list) -> dict:
 
 
 def validate(questions: list[dict], chunk_texts: dict[str, list[str]]) -> list[str]:
-    """Check every question has its fields, a known page, and a phrase that exists in one of that page's chunks."""
+    """Validate questions and verify that each relevant answer exists in the indexed chunks."""
     problems = []
+
     for i, q in enumerate(questions, 1):
-        missing = [k for k in ("q", "doc", "phrase", "type") if k not in q]
+        # Every question must have a question and a type
+        missing = [k for k in ("q", "type") if k not in q]
+
         if missing:
             problems.append(f"question {i}: missing {missing}")
             continue
-        texts = chunk_texts.get(q["doc"])
-        if texts is None:
-            problems.append(f"question {i}: unknown doc '{q['doc']}'")
-        elif not any(norm(q["phrase"]) in norm(t) for t in texts):
-            problems.append(f"question {i}: phrase not found in any chunk of '{q['doc']}': {q['phrase']}")
+
+        # Support both the old and new question formats
+        if "relevant" in q:
+            targets = q["relevant"]
+        elif "doc" in q and "phrase" in q:
+            targets = [{"doc": q["doc"], "phrase": q["phrase"]}]
+        else:
+            problems.append(f"question {i}: missing 'relevant' or 'doc'/'phrase'")
+            continue
+
+        if not isinstance(targets, list) or not targets:
+            problems.append(f"question {i}: 'relevant' must be a non-empty list")
+            continue
+
+        for target in targets:
+            if not isinstance(target, dict) or not all(
+                isinstance(target.get(k), str) and target[k].strip()
+                for k in ("doc", "phrase")
+            ):
+                problems.append(f"question {i}: invalid relevant target")
+                continue
+
+            doc = target["doc"]
+            phrase = target["phrase"]
+
+            texts = chunk_texts.get(doc)
+
+            if texts is None:
+                problems.append(f"question {i}: unknown doc '{doc}'")
+            elif not any(norm(phrase) in norm(t) for t in texts):
+                problems.append(
+                    f"question {i}: phrase not found in any chunk of '{doc}': {phrase}"
+                )
+
     return problems
 
 
@@ -74,7 +115,9 @@ def main() -> None:
                                      with_header=not args.no_header, use_prefix=not args.no_prefix)
     ranks = []
     for q in questions:
-        rank = first_hit_rank(search(col, emb, q["q"], 5), q["doc"], q["phrase"])
+        rank = first_hit_rank(
+        search(col, emb, q["q"], 5),
+        relevant=q.get("relevant", [{"doc": q.get("doc"), "phrase": q.get("phrase")}]))
         ranks.append(rank)
         if rank is None:
             print(f"MISS: {q['q']}")

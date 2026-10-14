@@ -47,7 +47,23 @@ def build_index(model_key: str, max_chars: int = 800, with_header: bool = True, 
 
 
 def search(col, embedder: Embedder, query: str, k: int = 5) -> list[dict]:
-    res = col.query(query_embeddings=[embedder.embed_query(query)], n_results=k,
-                    include=["documents", "metadatas", "distances"])
-    return [{"text": d, "meta": m, "distance": dist}
-            for d, m, dist in zip(res["documents"][0], res["metadatas"][0], res["distances"][0])]
+    res = col.query(
+        query_embeddings=[embedder.embed_query(query)],
+        n_results=k,
+        include=["documents", "metadatas", "distances"]
+    )
+
+    return [
+        {
+            "id": chunk_id,
+            "text": text,
+            "meta": meta,
+            "distance": distance
+        }
+        for chunk_id, text, meta, distance in zip(
+            res["ids"][0],
+            res["documents"][0],
+            res["metadatas"][0],
+            res["distances"][0]
+        )
+    ]
