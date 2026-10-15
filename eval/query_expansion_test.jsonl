@@ -1,0 +1,6 @@
+{"id": "T01", "type": "doorstep", "q": "נציג מכירות דפק לי בדלת ומכר לי שואב אבק. האם אוכל להתחרט?", "relevant": ["cancel-doorstep::000", "cancel-doorstep::001", "cancel-doorstep::003", "cancel-doorstep::004"]}
+{"id": "T02", "type": "doorstep", "q": "רכשתי מוצר מאדם שהגיע אליי לדירה. איך מבטלים את הרכישה?", "relevant": ["cancel-doorstep::004", "cancel-doorstep::006"]}
+{"id": "T03", "type": "ongoing", "q": "אני מנויה לשירות שמתחדש אוטומטית ורוצה להפסיק לשלם. מה עושים?", "relevant": ["cancel-ongoing::000", "cancel-ongoing::001", "cancel-ongoing::004"]}
+{"id": "T04", "type": "ongoing", "q": "חברת תקשורת ממשיכה לשלוח לי חשבוניות אחרי שביקשתי להתנתק. מה הזכויות שלי?", "relevant": ["cancel-ongoing::001", "cancel-ongoing::005", "cancel-ongoing::006"]}
+{"id": "T05", "type": "online", "q": "קניתי נעליים באתר אינטרנט ואני רוצה לבטל את ההזמנה. מה התנאים?", "relevant": ["cancel-online::003", "cancel-online::008", "cancel-online::009", "cancel-online::011"]}
+{"id": "T06", "type": "store", "q": "רכשתי מעיל בחנות והתחרטתי למחרת. האם מגיע לי החזר כספי?", "relevant": ["cancel-in-store::002", "cancel-in-store::003", "cancel-in-store::016"]}

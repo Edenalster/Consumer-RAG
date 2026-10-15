@@ -1,0 +1,117 @@
+[
+  {
+    "question": "תוך כמה זמן אפשר להחזיר בגדים ולקבל כסף בחזרה?",
+    "type": "direct",
+    "strategies": {
+      "dense": {
+        "answer": "את ביגוד והנעלה אפשר להחזיר ולקבל את הכסף בתוך יומיים ממועד הקנייה [מקור 1]. על בית העסק להחזיר את התמורה ככל הניתן במועד שבו בוטלה העסקה, ובכל מקרה עד 7 ימי עסקים לאחר מכן [מקור 1].",
+        "sources": [
+          {
+            "number": 1,
+            "title": "ביטול רכישה שנעשתה בבית העסק והחזרת המוצר",
+            "url": "https://www.kolzchut.org.il/he/ביטול_רכישה_שנעשתה_בבית_העסק_והחזרת_המוצר",
+            "chunk_id": "cancel-in-store::016",
+            "distance": 0.11142575740814209
+          }
+        ],
+        "status": "success"
+      },
+      "fusion": {
+        "answer": "אפשר להחזיר בגדים ולקבל את הכסף בחזרה בתוך יומיים ממועד הקנייה, כאשר מדובר ברכישה שנעשתה בבית העסק [מקור 1]. \n\nהמוכר יכול לתת שובר זיכוי במקום החזר כספי רק במקרים שבהם הצרכן אינו זכאי לבטל את העסקה או שחלף המועד להחזרת המוצר [מקור 1]. לעומת זאת, אם הרכישה נעשתה באינטרנט או בטלפון, ניתן לבטל את העסקה בתוך 14 ימים מיום קבלת המוצר או מסמך עם פרטי העסקה (לפי המאוחר) [מקור 5].",
+        "sources": [
+          {
+            "number": 1,
+            "title": "ביטול רכישה שנעשתה בבית העסק והחזרת המוצר",
+            "url": "https://www.kolzchut.org.il/he/ביטול_רכישה_שנעשתה_בבית_העסק_והחזרת_המוצר",
+            "chunk_id": "cancel-in-store::016",
+            "distance": 0.11142575740814209
+          },
+          {
+            "number": 5,
+            "title": "ביטול עסקה שנעשתה באינטרנט או בטלפון",
+            "url": "https://www.kolzchut.org.il/he/ביטול_עסקה_שנעשתה_באינטרנט_או_בטלפון",
+            "chunk_id": "cancel-online::003",
+            "distance": 0.15398156642913818
+          }
+        ],
+        "status": "success"
+      },
+      "fusion_expanded": {
+        "status": "error",
+        "error": "fusion_expanded strategy requires a reranker"
+      }
+    }
+  },
+  {
+    "question": "אפשר להחזיר בגד ים שקניתי?",
+    "type": "direct",
+    "strategies": {
+      "dense": {
+        "answer": "אי-אפשר לבטל עסקאות רכישה של הלבשה תחתונה ובגדי ים [מקור 1].",
+        "sources": [
+          {
+            "number": 1,
+            "title": "עסקה צרכנית שלא ניתן לבטל",
+            "url": "https://www.kolzchut.org.il/he/עסקה_צרכנית_שלא_ניתן_לבטל",
+            "chunk_id": "cannot-cancel::002",
+            "distance": 0.17171096801757812
+          }
+        ],
+        "status": "success"
+      },
+      "fusion": {
+        "answer": "אי-אפשר לבטל ע עסקה ולהחזיר הלבשה תחתונה ובגדי ים [מקור 2].",
+        "sources": [
+          {
+            "number": 2,
+            "title": "עסקה צרכנית שלא ניתן לבטל",
+            "url": "https://www.kolzchut.org.il/he/עסקה_צרכנית_שלא_ניתן_לבטל",
+            "chunk_id": "cannot-cancel::002",
+            "distance": 0.17171096801757812
+          }
+        ],
+        "status": "success"
+      },
+      "fusion_expanded": {
+        "status": "error",
+        "error": "fusion_expanded strategy requires a reranker"
+      }
+    }
+  },
+  {
+    "question": "מה צריך להיות המחיר המינימלי של מוצר כדי שאוכל לבטל עסקה?",
+    "type": "direct",
+    "strategies": {
+      "dense": {
+        "answer": "כדי שניתן יהיה לבטל עסקת רכישת מוצר שנעשתה בבית העסק, ערך המוצר הנרכש צריך לעלות על 50 ₪ [מקור 4].",
+        "sources": [
+          {
+            "number": 4,
+            "title": "עסקה צרכנית שלא ניתן לבטל",
+            "url": "https://www.kolzchut.org.il/he/עסקה_צרכנית_שלא_ניתן_לבטל",
+            "chunk_id": "cannot-cancel::001",
+            "distance": 0.1247485876083374
+          }
+        ],
+        "status": "success"
+      },
+      "fusion": {
+        "answer": "כדי שתוכל לבטל עסקה שנעשתה בבית העסק, ערך המוצר הנרכש צריך לעלות על 50 ₪ [מקור 1].",
+        "sources": [
+          {
+            "number": 1,
+            "title": "עסקה צרכנית שלא ניתן לבטל",
+            "url": "https://www.kolzchut.org.il/he/עסקה_צרכנית_שלא_ניתן_לבטל",
+            "chunk_id": "cannot-cancel::001",
+            "distance": 0.1247485876083374
+          }
+        ],
+        "status": "success"
+      },
+      "fusion_expanded": {
+        "status": "error",
+        "error": "fusion_expanded strategy requires a reranker"
+      }
+    }
+  }
+]

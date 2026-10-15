@@ -74,3 +74,125 @@ def test_ask_returns_only_cited_sources(mock_search, mock_generate):
     ]
 
     mock_generate.assert_called_once()
+
+from unittest.mock import patch
+import pytest
+
+from src.consumer_rag.rag import ask
+
+
+def test_ask_uses_dense_strategy():
+    with (
+        patch("src.consumer_rag.rag.search", return_value=[]) as mock_search,
+        patch(
+            "src.consumer_rag.rag.generate_answer",
+            return_value="לא נמצא מידע רלוונטי.",
+        ),
+    ):
+        result = ask(
+            question="שאלת בדיקה",
+            col=None,
+            embedder=None,
+            strategy="dense",
+        )
+
+    mock_search.assert_called_once()
+    assert result["sources"] == []
+
+
+def test_ask_uses_fusion_strategy():
+    with (
+        patch("src.consumer_rag.rag.fused_search", return_value=[]) as mock_fusion,
+        patch(
+            "src.consumer_rag.rag.generate_answer",
+            return_value="לא נמצא מידע רלוונטי.",
+        ),
+    ):
+        result = ask(
+            question="שאלת בדיקה",
+            col=None,
+            embedder=None,
+            strategy="fusion",
+            reranker=object(),
+        )
+
+    mock_fusion.assert_called_once()
+    assert result["sources"] == []
+
+
+def test_fusion_requires_reranker():
+    with pytest.raises(ValueError, match="requires a reranker"):
+        ask(
+            question="שאלת בדיקה",
+            col=None,
+            embedder=None,
+            strategy="fusion",
+        )
+
+def test_ask_uses_fusion_expanded_strategy():
+    from unittest.mock import patch
+
+    from src.consumer_rag.rag import ask
+
+    base_chunks = [
+        {
+            "id": "doc-a::001",
+            "text": "Original text",
+            "meta": {
+                "title": "Document A",
+                "url": "https://example.com/a",
+            },
+            "distance": 0.1,
+        }
+    ]
+
+    expanded_chunks = base_chunks + [
+        {
+            "id": "doc-a::002",
+            "text": "Additional context",
+            "meta": {
+                "title": "Document A",
+                "url": "https://example.com/a",
+            },
+            "distance": 0.2,
+        }
+    ]
+
+    with (
+        patch(
+            "src.consumer_rag.rag.fused_search",
+            return_value=base_chunks,
+        ) as mock_fusion,
+        patch(
+            "src.consumer_rag.rag.expand_context",
+            return_value=expanded_chunks,
+        ) as mock_expand,
+        patch(
+            "src.consumer_rag.rag.generate_answer",
+            return_value="תשובה המבוססת על ההקשר הנוסף [מקור 2].",
+        ) as mock_generate,
+    ):
+        result = ask(
+            question="שאלת בדיקה",
+            col=None,
+            embedder=None,
+            strategy="fusion_expanded",
+            reranker=object(),
+        )
+
+    # Fusion retrieval was executed
+    mock_fusion.assert_called_once()
+
+    # Context expansion was executed
+    mock_expand.assert_called_once()
+
+    # Expansion received the original retrieval results
+    assert mock_expand.call_args.kwargs["base_results"] == base_chunks
+
+    # Gemini received the expanded context
+    assert mock_generate.call_args.kwargs["chunks"] == expanded_chunks
+
+    # Only the cited source is returned
+    assert len(result["sources"]) == 1
+    assert result["sources"][0]["chunk_id"] == "doc-a::002"
+    assert result["sources"][0]["number"] == 2

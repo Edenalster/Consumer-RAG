@@ -1,0 +1,444 @@
+{
+  "original": {
+    "metrics": {
+      "recall@1": 0.8666666666666667,
+      "recall@3": 0.9333333333333333,
+      "recall@5": 0.9333333333333333,
+      "mrr": 0.9,
+      "avg_latency_ms": 6334.78
+    },
+    "questions": [
+      {
+        "question_id": 1,
+        "type": "direct",
+        "expanded": false,
+        "first_hit_rank": 1,
+        "retrieved": [
+          "remote-sale::000",
+          "remote-sale::005",
+          "cancel-in-store::015",
+          "remote-sale::003",
+          "remote-sale::004"
+        ],
+        "latency_ms": 8588.93
+      },
+      {
+        "question_id": 2,
+        "type": "direct",
+        "expanded": false,
+        "first_hit_rank": 1,
+        "retrieved": [
+          "consumer-authority::003",
+          "cancel-in-store::015",
+          "consumer-authority::002",
+          "cancel-online::012",
+          "cancel-doorstep::012"
+        ],
+        "latency_ms": 7379.26
+      },
+      {
+        "question_id": 3,
+        "type": "direct",
+        "expanded": false,
+        "first_hit_rank": 1,
+        "retrieved": [
+          "cancel-in-store::012",
+          "cancel-doorstep::009",
+          "cancel-in-store::016",
+          "cancel-in-store::013",
+          "cancel-doorstep::010"
+        ],
+        "latency_ms": 5618.42
+      },
+      {
+        "question_id": 4,
+        "type": "direct",
+        "expanded": false,
+        "first_hit_rank": 1,
+        "retrieved": [
+          "cannot-cancel::002",
+          "cancel-doorstep::002",
+          "cannot-cancel::001",
+          "cancel-online::002",
+          "cancel-in-store::003"
+        ],
+        "latency_ms": 6363.56
+      },
+      {
+        "question_id": 5,
+        "type": "direct",
+        "expanded": false,
+        "first_hit_rank": 2,
+        "retrieved": [
+          "cancel-online::011",
+          "cancellation-fees::003",
+          "cancel-in-store::014",
+          "cancellation-fees::001",
+          "cancel-ongoing::005"
+        ],
+        "latency_ms": 6010.68
+      },
+      {
+        "question_id": 6,
+        "type": "paraphrase",
+        "expanded": false,
+        "first_hit_rank": 1,
+        "retrieved": [
+          "cancel-online::003",
+          "cancel-online::004",
+          "cancel-online::015",
+          "cancel-online::014",
+          "cancel-online::005"
+        ],
+        "latency_ms": 6080.64
+      },
+      {
+        "question_id": 7,
+        "type": "paraphrase",
+        "expanded": false,
+        "first_hit_rank": 1,
+        "retrieved": [
+          "cancel-ongoing::005",
+          "cancel-ongoing::001",
+          "cancel-in-store::004",
+          "cancel-in-store::006",
+          "cancel-doorstep::005"
+        ],
+        "latency_ms": 6154.24
+      },
+      {
+        "question_id": 8,
+        "type": "paraphrase",
+        "expanded": true,
+        "first_hit_rank": null,
+        "retrieved": [
+          "cancel-in-store::003",
+          "cancel-online::001",
+          "cancel-online::009",
+          "cancel-online::002",
+          "cancel-in-store::001"
+        ],
+        "latency_ms": 6734.99
+      },
+      {
+        "question_id": 9,
+        "type": "paraphrase",
+        "expanded": false,
+        "first_hit_rank": 1,
+        "retrieved": [
+          "cancel-in-store::017",
+          "cancel-in-store::016",
+          "cancel-in-store::010",
+          "cancel-in-store::012",
+          "cancel-in-store::011"
+        ],
+        "latency_ms": 5728.6
+      },
+      {
+        "question_id": 10,
+        "type": "paraphrase",
+        "expanded": false,
+        "first_hit_rank": 1,
+        "retrieved": [
+          "cancel-in-store::014",
+          "cancel-in-store::010",
+          "cancel-in-store::016",
+          "cancel-in-store::012",
+          "cancel-in-store::001"
+        ],
+        "latency_ms": 5468.75
+      },
+      {
+        "question_id": 11,
+        "type": "scenario",
+        "expanded": false,
+        "first_hit_rank": 1,
+        "retrieved": [
+          "cancel-online::014",
+          "cancel-online::003",
+          "cancel-in-store::017",
+          "cancel-in-store::003",
+          "cancel-online::004"
+        ],
+        "latency_ms": 6371.1
+      },
+      {
+        "question_id": 12,
+        "type": "scenario",
+        "expanded": false,
+        "first_hit_rank": 1,
+        "retrieved": [
+          "cannot-cancel::002",
+          "cancel-in-store::001",
+          "cancel-in-store::003",
+          "cancel-in-store::006",
+          "cancel-online::013"
+        ],
+        "latency_ms": 6492.77
+      },
+      {
+        "question_id": 13,
+        "type": "scenario",
+        "expanded": true,
+        "first_hit_rank": 1,
+        "retrieved": [
+          "cancel-ongoing::005",
+          "cancel-online::012",
+          "cancel-online::010",
+          "cancel-ongoing::001",
+          "cancel-ongoing::008"
+        ],
+        "latency_ms": 6179.79
+      },
+      {
+        "question_id": 14,
+        "type": "scenario",
+        "expanded": false,
+        "first_hit_rank": 1,
+        "retrieved": [
+          "cancel-online::011",
+          "cancel-online::001",
+          "cancellation-fees::002",
+          "cancellation-fees::001",
+          "cancel-in-store::014"
+        ],
+        "latency_ms": 5769.9
+      },
+      {
+        "question_id": 15,
+        "type": "scenario",
+        "expanded": false,
+        "first_hit_rank": 1,
+        "retrieved": [
+          "cancel-in-store::017",
+          "cancel-in-store::014",
+          "cancel-ongoing::008",
+          "cancel-in-store::008",
+          "cancel-ongoing::006"
+        ],
+        "latency_ms": 6080.09
+      }
+    ]
+  },
+  "expanded": {
+    "metrics": {
+      "recall@1": 0.9333333333333333,
+      "recall@3": 1.0,
+      "recall@5": 1.0,
+      "mrr": 0.9666666666666667,
+      "avg_latency_ms": 6098.37
+    },
+    "questions": [
+      {
+        "question_id": 1,
+        "type": "direct",
+        "expanded": false,
+        "first_hit_rank": 1,
+        "retrieved": [
+          "remote-sale::000",
+          "remote-sale::005",
+          "cancel-in-store::015",
+          "remote-sale::003",
+          "remote-sale::004"
+        ],
+        "latency_ms": 5798.38
+      },
+      {
+        "question_id": 2,
+        "type": "direct",
+        "expanded": false,
+        "first_hit_rank": 1,
+        "retrieved": [
+          "consumer-authority::003",
+          "cancel-in-store::015",
+          "consumer-authority::002",
+          "cancel-online::012",
+          "cancel-doorstep::012"
+        ],
+        "latency_ms": 6441.72
+      },
+      {
+        "question_id": 3,
+        "type": "direct",
+        "expanded": false,
+        "first_hit_rank": 1,
+        "retrieved": [
+          "cancel-in-store::012",
+          "cancel-doorstep::009",
+          "cancel-in-store::016",
+          "cancel-in-store::013",
+          "cancel-doorstep::010"
+        ],
+        "latency_ms": 5441.96
+      },
+      {
+        "question_id": 4,
+        "type": "direct",
+        "expanded": false,
+        "first_hit_rank": 1,
+        "retrieved": [
+          "cannot-cancel::002",
+          "cancel-doorstep::002",
+          "cannot-cancel::001",
+          "cancel-online::002",
+          "cancel-in-store::003"
+        ],
+        "latency_ms": 6361.33
+      },
+      {
+        "question_id": 5,
+        "type": "direct",
+        "expanded": false,
+        "first_hit_rank": 2,
+        "retrieved": [
+          "cancel-online::011",
+          "cancellation-fees::003",
+          "cancel-in-store::014",
+          "cancellation-fees::001",
+          "cancel-ongoing::005"
+        ],
+        "latency_ms": 5954.62
+      },
+      {
+        "question_id": 6,
+        "type": "paraphrase",
+        "expanded": false,
+        "first_hit_rank": 1,
+        "retrieved": [
+          "cancel-online::003",
+          "cancel-online::004",
+          "cancel-online::015",
+          "cancel-online::014",
+          "cancel-online::005"
+        ],
+        "latency_ms": 6038.19
+      },
+      {
+        "question_id": 7,
+        "type": "paraphrase",
+        "expanded": false,
+        "first_hit_rank": 1,
+        "retrieved": [
+          "cancel-ongoing::005",
+          "cancel-ongoing::001",
+          "cancel-in-store::004",
+          "cancel-in-store::006",
+          "cancel-doorstep::005"
+        ],
+        "latency_ms": 6043.61
+      },
+      {
+        "question_id": 8,
+        "type": "paraphrase",
+        "expanded": true,
+        "first_hit_rank": 1,
+        "retrieved": [
+          "cancel-doorstep::001",
+          "cancel-doorstep::004",
+          "cancel-doorstep::012",
+          "cancel-in-store::003",
+          "cancel-online::001"
+        ],
+        "latency_ms": 6138.06
+      },
+      {
+        "question_id": 9,
+        "type": "paraphrase",
+        "expanded": false,
+        "first_hit_rank": 1,
+        "retrieved": [
+          "cancel-in-store::017",
+          "cancel-in-store::016",
+          "cancel-in-store::010",
+          "cancel-in-store::012",
+          "cancel-in-store::011"
+        ],
+        "latency_ms": 5897.7
+      },
+      {
+        "question_id": 10,
+        "type": "paraphrase",
+        "expanded": false,
+        "first_hit_rank": 1,
+        "retrieved": [
+          "cancel-in-store::014",
+          "cancel-in-store::010",
+          "cancel-in-store::016",
+          "cancel-in-store::012",
+          "cancel-in-store::001"
+        ],
+        "latency_ms": 5477.85
+      },
+      {
+        "question_id": 11,
+        "type": "scenario",
+        "expanded": false,
+        "first_hit_rank": 1,
+        "retrieved": [
+          "cancel-online::014",
+          "cancel-online::003",
+          "cancel-in-store::017",
+          "cancel-in-store::003",
+          "cancel-online::004"
+        ],
+        "latency_ms": 6884.39
+      },
+      {
+        "question_id": 12,
+        "type": "scenario",
+        "expanded": false,
+        "first_hit_rank": 1,
+        "retrieved": [
+          "cannot-cancel::002",
+          "cancel-in-store::001",
+          "cancel-in-store::003",
+          "cancel-in-store::006",
+          "cancel-online::013"
+        ],
+        "latency_ms": 6496.49
+      },
+      {
+        "question_id": 13,
+        "type": "scenario",
+        "expanded": true,
+        "first_hit_rank": 1,
+        "retrieved": [
+          "cancel-ongoing::001",
+          "cancel-ongoing::005",
+          "cancel-online::010",
+          "cancel-ongoing::000",
+          "cancel-online::012"
+        ],
+        "latency_ms": 6648.38
+      },
+      {
+        "question_id": 14,
+        "type": "scenario",
+        "expanded": false,
+        "first_hit_rank": 1,
+        "retrieved": [
+          "cancel-online::011",
+          "cancel-online::001",
+          "cancellation-fees::002",
+          "cancellation-fees::001",
+          "cancel-in-store::014"
+        ],
+        "latency_ms": 5792.9
+      },
+      {
+        "question_id": 15,
+        "type": "scenario",
+        "expanded": false,
+        "first_hit_rank": 1,
+        "retrieved": [
+          "cancel-in-store::017",
+          "cancel-in-store::014",
+          "cancel-ongoing::008",
+          "cancel-in-store::008",
+          "cancel-ongoing::006"
+        ],
+        "latency_ms": 6059.95
+      }
+    ]
+  }
+}

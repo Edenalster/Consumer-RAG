@@ -1,0 +1,279 @@
+{
+  "test_set": "eval/query_expansion_test.jsonl",
+  "strategies": {
+    "original": {
+      "metrics": {
+        "recall@1": 0.16666666666666666,
+        "recall@3": 0.3333333333333333,
+        "recall@5": 0.5,
+        "mrr": 0.2833333333333333,
+        "avg_latency_ms": 6146.607534659172
+      },
+      "questions": [
+        {
+          "question_id": "T01",
+          "type": "doorstep",
+          "question": "נציג מכירות דפק לי בדלת ומכר לי שואב אבק. האם אוכל להתחרט?",
+          "expanded_query": "נציג מכירות דפק לי בדלת ומכר לי שואב אבק. האם אוכל להתחרט?",
+          "was_expanded": false,
+          "relevant": [
+            "cancel-doorstep::000",
+            "cancel-doorstep::001",
+            "cancel-doorstep::003"
+          ],
+          "retrieved": [
+            "cancel-in-store::001",
+            "cancel-in-store::003",
+            "cancel-online::001",
+            "cancel-ongoing::008",
+            "cancel-in-store::006"
+          ],
+          "first_hit_rank": null,
+          "latency_ms": 6404.123582993634
+        },
+        {
+          "question_id": "T02",
+          "type": "doorstep",
+          "question": "רכשתי מוצר מאדם שהגיע אליי לדירה. איך מבטלים את הרכישה?",
+          "expanded_query": "רכשתי מוצר מאדם שהגיע אליי לדירה. איך מבטלים את הרכישה?",
+          "was_expanded": false,
+          "relevant": [
+            "cancel-doorstep::004",
+            "cancel-doorstep::006"
+          ],
+          "retrieved": [
+            "cancel-in-store::003",
+            "cancel-in-store::006",
+            "cancel-in-store::004",
+            "cancel-doorstep::012",
+            "cancel-online::002"
+          ],
+          "first_hit_rank": null,
+          "latency_ms": 6147.81925000716
+        },
+        {
+          "question_id": "T03",
+          "type": "ongoing",
+          "question": "אני מנויה לשירות שמתחדש אוטומטית ורוצה להפסיק לשלם. מה עושים?",
+          "expanded_query": "אני מנויה לשירות שמתחדש אוטומטית ורוצה להפסיק לשלם. מה עושים?",
+          "was_expanded": false,
+          "relevant": [
+            "cancel-ongoing::000",
+            "cancel-ongoing::001",
+            "cancel-ongoing::004"
+          ],
+          "retrieved": [
+            "cancel-ongoing::005",
+            "cancel-online::010",
+            "cancel-ongoing::008",
+            "cancel-online::001",
+            "cancel-ongoing::001"
+          ],
+          "first_hit_rank": 5,
+          "latency_ms": 6024.543666979298
+        },
+        {
+          "question_id": "T04",
+          "type": "ongoing",
+          "question": "חברת תקשורת ממשיכה לשלוח לי חשבוניות אחרי שביקשתי להתנתק. מה הזכויות שלי?",
+          "expanded_query": "חברת תקשורת ממשיכה לשלוח לי חשבוניות אחרי שביקשתי להתנתק. מה הזכויות שלי?",
+          "was_expanded": false,
+          "relevant": [
+            "cancel-ongoing::001",
+            "cancel-ongoing::005",
+            "cancel-ongoing::006"
+          ],
+          "retrieved": [
+            "cancel-ongoing::008",
+            "cancel-ongoing::005",
+            "cancel-ongoing::001",
+            "cancel-ongoing::006",
+            "cancel-ongoing::003"
+          ],
+          "first_hit_rank": 2,
+          "latency_ms": 5882.621957978699
+        },
+        {
+          "question_id": "T05",
+          "type": "online",
+          "question": "קניתי נעליים באתר אינטרנט ואני רוצה לבטל את ההזמנה. מה התנאים?",
+          "expanded_query": "קניתי נעליים באתר אינטרנט ואני רוצה לבטל את ההזמנה. מה התנאים?",
+          "was_expanded": false,
+          "relevant": [
+            "cancel-online::003",
+            "cancel-online::008",
+            "cancel-online::009",
+            "cancel-online::011"
+          ],
+          "retrieved": [
+            "cancel-online::001",
+            "cancel-online::014",
+            "cancel-online::015",
+            "cancel-in-store::003",
+            "cancel-online::004"
+          ],
+          "first_hit_rank": null,
+          "latency_ms": 6158.585875004064
+        },
+        {
+          "question_id": "T06",
+          "type": "store",
+          "question": "רכשתי מעיל בחנות והתחרטתי למחרת. האם מגיע לי החזר כספי?",
+          "expanded_query": "רכשתי מעיל בחנות והתחרטתי למחרת. האם מגיע לי החזר כספי?",
+          "was_expanded": false,
+          "relevant": [
+            "cancel-in-store::002",
+            "cancel-in-store::003",
+            "cancel-in-store::016"
+          ],
+          "retrieved": [
+            "cancel-in-store::016",
+            "cancel-in-store::017",
+            "cancel-in-store::001",
+            "cancel-online::010",
+            "cancel-online::001"
+          ],
+          "first_hit_rank": 1,
+          "latency_ms": 6261.950874992181
+        }
+      ]
+    },
+    "expanded": {
+      "metrics": {
+        "recall@1": 0.16666666666666666,
+        "recall@3": 0.3333333333333333,
+        "recall@5": 0.5,
+        "mrr": 0.2833333333333333,
+        "avg_latency_ms": 6188.759555331974
+      },
+      "questions": [
+        {
+          "question_id": "T01",
+          "type": "doorstep",
+          "question": "נציג מכירות דפק לי בדלת ומכר לי שואב אבק. האם אוכל להתחרט?",
+          "expanded_query": "נציג מכירות דפק לי בדלת ומכר לי שואב אבק. האם אוכל להתחרט?",
+          "was_expanded": false,
+          "relevant": [
+            "cancel-doorstep::000",
+            "cancel-doorstep::001",
+            "cancel-doorstep::003"
+          ],
+          "retrieved": [
+            "cancel-in-store::001",
+            "cancel-in-store::003",
+            "cancel-online::001",
+            "cancel-ongoing::008",
+            "cancel-in-store::006"
+          ],
+          "first_hit_rank": null,
+          "latency_ms": 6249.859750038013
+        },
+        {
+          "question_id": "T02",
+          "type": "doorstep",
+          "question": "רכשתי מוצר מאדם שהגיע אליי לדירה. איך מבטלים את הרכישה?",
+          "expanded_query": "רכשתי מוצר מאדם שהגיע אליי לדירה. איך מבטלים את הרכישה?",
+          "was_expanded": false,
+          "relevant": [
+            "cancel-doorstep::004",
+            "cancel-doorstep::006"
+          ],
+          "retrieved": [
+            "cancel-in-store::003",
+            "cancel-in-store::006",
+            "cancel-in-store::004",
+            "cancel-doorstep::012",
+            "cancel-online::002"
+          ],
+          "first_hit_rank": null,
+          "latency_ms": 6157.42133295862
+        },
+        {
+          "question_id": "T03",
+          "type": "ongoing",
+          "question": "אני מנויה לשירות שמתחדש אוטומטית ורוצה להפסיק לשלם. מה עושים?",
+          "expanded_query": "אני מנויה לשירות שמתחדש אוטומטית ורוצה להפסיק לשלם. מה עושים?",
+          "was_expanded": false,
+          "relevant": [
+            "cancel-ongoing::000",
+            "cancel-ongoing::001",
+            "cancel-ongoing::004"
+          ],
+          "retrieved": [
+            "cancel-ongoing::005",
+            "cancel-online::010",
+            "cancel-ongoing::008",
+            "cancel-online::001",
+            "cancel-ongoing::001"
+          ],
+          "first_hit_rank": 5,
+          "latency_ms": 6282.124833029229
+        },
+        {
+          "question_id": "T04",
+          "type": "ongoing",
+          "question": "חברת תקשורת ממשיכה לשלוח לי חשבוניות אחרי שביקשתי להתנתק. מה הזכויות שלי?",
+          "expanded_query": "חברת תקשורת ממשיכה לשלוח לי חשבוניות אחרי שביקשתי להתנתק. מה הזכויות שלי?",
+          "was_expanded": false,
+          "relevant": [
+            "cancel-ongoing::001",
+            "cancel-ongoing::005",
+            "cancel-ongoing::006"
+          ],
+          "retrieved": [
+            "cancel-ongoing::008",
+            "cancel-ongoing::005",
+            "cancel-ongoing::001",
+            "cancel-ongoing::006",
+            "cancel-ongoing::003"
+          ],
+          "first_hit_rank": 2,
+          "latency_ms": 6026.804708002601
+        },
+        {
+          "question_id": "T05",
+          "type": "online",
+          "question": "קניתי נעליים באתר אינטרנט ואני רוצה לבטל את ההזמנה. מה התנאים?",
+          "expanded_query": "קניתי נעליים באתר אינטרנט ואני רוצה לבטל את ההזמנה. מה התנאים?",
+          "was_expanded": false,
+          "relevant": [
+            "cancel-online::003",
+            "cancel-online::008",
+            "cancel-online::009",
+            "cancel-online::011"
+          ],
+          "retrieved": [
+            "cancel-online::001",
+            "cancel-online::014",
+            "cancel-online::015",
+            "cancel-in-store::003",
+            "cancel-online::004"
+          ],
+          "first_hit_rank": null,
+          "latency_ms": 6212.798832973931
+        },
+        {
+          "question_id": "T06",
+          "type": "store",
+          "question": "רכשתי מעיל בחנות והתחרטתי למחרת. האם מגיע לי החזר כספי?",
+          "expanded_query": "רכשתי מעיל בחנות והתחרטתי למחרת. האם מגיע לי החזר כספי?",
+          "was_expanded": false,
+          "relevant": [
+            "cancel-in-store::002",
+            "cancel-in-store::003",
+            "cancel-in-store::016"
+          ],
+          "retrieved": [
+            "cancel-in-store::016",
+            "cancel-in-store::017",
+            "cancel-in-store::001",
+            "cancel-online::010",
+            "cancel-online::001"
+          ],
+          "first_hit_rank": 1,
+          "latency_ms": 6203.547874989454
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,179 @@
+[
+  {
+    "question_id": 1,
+    "scores": {
+      "dense": {
+        "correctness": 2,
+        "completeness": 1
+      },
+      "fusion": {
+        "correctness": 2,
+        "completeness": 1
+      },
+      "fusion_expanded": {
+        "correctness": 2,
+        "completeness": 1
+      }
+    }
+  },
+  {
+    "question_id": 2,
+    "scores": {
+      "dense": {
+        "correctness": 1,
+        "completeness": 1
+      },
+      "fusion": {
+        "correctness": 1,
+        "completeness": 1
+      },
+      "fusion_expanded": {
+        "correctness": 1,
+        "completeness": 1
+      }
+    }
+  },
+  {
+    "question_id": 3,
+    "scores": {
+      "dense": {
+        "correctness": 2,
+        "completeness": 1
+      },
+      "fusion": {
+        "correctness": 2,
+        "completeness": 1
+      },
+      "fusion_expanded": {
+        "correctness": 2,
+        "completeness": 2
+      }
+    }
+  },
+  {
+    "question_id": 4,
+    "scores": {
+      "dense": {
+        "correctness": 2,
+        "completeness": 2
+      },
+      "fusion": {
+        "correctness": 2,
+        "completeness": 2
+      },
+      "fusion_expanded": {
+        "correctness": 2,
+        "completeness": 2
+      },
+      "hybrid": {
+        "correctness": 2,
+        "completeness": 2
+      }
+    }
+  },
+  {
+    "question_id": 5,
+    "scores": {
+      "dense": {
+        "correctness": 2,
+        "completeness": 2
+      },
+      "fusion": {
+        "correctness": 2,
+        "completeness": 2
+      },
+      "fusion_expanded": {
+        "correctness": 2,
+        "completeness": 2
+      },
+      "hybrid": {
+        "correctness": 2,
+        "completeness": 2
+      }
+    }
+  },
+  {
+    "question_id": 6,
+    "scores": {
+      "dense": {
+        "correctness": 2,
+        "completeness": 2
+      },
+      "fusion": {
+        "correctness": 2,
+        "completeness": 2
+      },
+      "fusion_expanded": {
+        "correctness": 2,
+        "completeness": 2
+      },
+      "hybrid": {
+        "correctness": 2,
+        "completeness": 2
+      }
+    }
+  },
+  {
+    "question_id": 8,
+    "scores": {
+      "dense": {
+        "correctness": 0,
+        "completeness": 0
+      },
+      "fusion": {
+        "correctness": 2,
+        "completeness": 2
+      },
+      "fusion_expanded": {
+        "correctness": 2,
+        "completeness": 2
+      },
+      "hybrid": {
+        "correctness": 2,
+        "completeness": 2
+      }
+    }
+  },
+  {
+    "question_id": 10,
+    "scores": {
+      "dense": {
+        "correctness": 2,
+        "completeness": 1
+      },
+      "fusion": {
+        "correctness": 2,
+        "completeness": 1
+      },
+      "fusion_expanded": {
+        "correctness": 2,
+        "completeness": 1
+      },
+      "hybrid": {
+        "correctness": 2,
+        "completeness": 1
+      }
+    }
+  },
+  {
+    "question_id": 11,
+    "scores": {
+      "dense": {
+        "correctness": 2,
+        "completeness": 2
+      },
+      "fusion": {
+        "correctness": 2,
+        "completeness": 2
+      },
+      "fusion_expanded": {
+        "correctness": 2,
+        "completeness": 2
+      },
+      "hybrid": {
+        "correctness": 2,
+        "completeness": 2
+      }
+    }
+  }
+]
