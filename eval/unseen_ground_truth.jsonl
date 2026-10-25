@@ -1,0 +1,10 @@
+{"id": "U01", "q": "מישהו הציע לי בבית מכשיר לטיהור מים ושכנע אותי לקנות. עכשיו אני מתחרטת, מה האפשרויות שלי?", "relevant": ["cancel-doorstep::000", "cancel-doorstep::001", "cancel-doorstep::004", "cancel-doorstep::006", "cancel-doorstep::008"]}
+{"id": "U02", "q": "חתמתי על רכישת מוצר כשנציג הגיע למקום העבודה שלי. האם אפשר לחזור בי?", "relevant": ["cancel-doorstep::000", "cancel-doorstep::001", "cancel-doorstep::003"]}
+{"id": "U03", "q": "אני משלמת כל חודש על שירות שלא השתמשתי בו כבר תקופה. איך מפסיקים את החיובים?", "relevant": ["cancel-ongoing::001", "cancel-ongoing::004", "cancel-ongoing::005", "cancel-ongoing::006"]}
+{"id": "U04", "q": "ביקשתי לסיים התקשרות עם ספק שירות, אבל בחודש הבא שוב ירד לי תשלום. מה אפשר לעשות?", "relevant": ["cancel-ongoing::001", "cancel-ongoing::005", "cancel-ongoing::006"]}
+{"id": "U05", "q": "הזמנתי תיק מאתר ישראלי, והוא עדיין לא נשלח. האם אפשר להתחרט על הרכישה?", "relevant": ["cancel-online::001", "cancel-online::003", "cancel-online::008"]}
+{"id": "U06", "q": "קיבלתי מוצר שהזמנתי בטלפון והוא שונה ממה שהבטיחו לי. האם חייבים לשלם כדי להחזיר אותו?", "relevant": ["cancel-online::009", "cancel-online::011"]}
+{"id": "U07", "q": "רכשתי מכנסיים בחנות, לא לבשתי אותם ואני רוצה להחזיר אותם. כמה זמן יש לי?", "relevant": ["cancel-in-store::002", "cancel-in-store::003", "cancel-in-store::016"]}
+{"id": "U08", "q": "קניתי חולצה והורדתי ממנה את תווית המחיר, אבל לא השתמשתי בה. האם החנות חייבת לקבל אותה בחזרה?", "relevant": ["cancel-in-store::002", "cancel-in-store::003"]}
+{"id": "U09", "q": "הזמנתי פריט עם חריטה אישית לפי בקשתי. האם יש לי זכות להתחרט ולבטל?", "relevant": ["cancel-doorstep::002", "cancel-in-store::006", "cancel-online::002", "cannot-cancel::002"]}
+{"id": "U10", "q": "המוכר אמר שאין החזר כספי בשום מצב, גם אם אני מבטלת רכישה בזמן. האם זה חוקי?", "relevant": ["cancel-doorstep::008", "cancel-doorstep::009", "cancel-in-store::001", "cancel-in-store::010", "cancel-in-store::011", "cancel-in-store::012", "cancel-in-store::016", "cancel-online::010", "cancel-online::012"]}

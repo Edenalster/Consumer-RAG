@@ -1,5 +1,6 @@
 import json
 import os
+from functools import lru_cache
 
 from google import genai
 
@@ -14,6 +15,15 @@ LEGAL_CATEGORIES = [
 
 
 def classify_legal_query(question: str) -> str:
+    try:
+        return _classify_legal_query_cached(question)
+    except Exception as exc:
+        print(f"Classification failed: {exc}")
+        return "לא ידוע"
+
+
+@lru_cache(maxsize=256)
+def _classify_legal_query_cached(question: str) -> str:
     """
     Classify a consumer-law question into a legal category.
 
@@ -103,6 +113,23 @@ def classify_legal_query(question: str) -> str:
 
         return category
 
-    except Exception as exc:
-        print(f"Classification failed: {exc}")
-        return "לא ידוע"
+    except Exception:
+        raise
+
+def expand_query_with_llm(question: str) -> str:
+    """
+    Expand a user query with a legal category identified by Gemini.
+
+    If classification fails or the category is unknown,
+    return the original query unchanged.
+    """
+
+    category = classify_legal_query(question)
+
+    if category == "לא ידוע":
+        return question
+
+    if category in question:
+        return question
+
+    return f"{question} {category}"

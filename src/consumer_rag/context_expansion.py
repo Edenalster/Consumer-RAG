@@ -3,49 +3,57 @@ def expand_context(
     embedder,
     query: str,
     base_results: list[dict],
-    extra_k: int = 5,
+    extra_k: int = 3,
+    search_k: int = 10,
 ) -> list[dict]:
     """
-    Expand retrieved context with additional chunks
+    Expand context with additional unique chunks
     from the highest-ranked document.
+
+    search_k: Number of candidates to retrieve.
+    extra_k: Maximum number of new chunks to add.
     """
 
-    if not base_results:
-        return []
+    if not base_results or extra_k <= 0:
+        return list(base_results)
 
-    # Identify the document of the top-ranked chunk
     top_doc_id = base_results[0]["meta"]["doc_id"]
 
-    # Retrieve additional chunks from the same document
+    # Search more candidates than we intend to add.
     res = col.query(
         query_embeddings=[embedder.embed_query(query)],
-        n_results=extra_k,
+        n_results=search_k,
         where={"doc_id": top_doc_id},
         include=["documents", "metadatas", "distances"],
     )
 
-    extra_results = [
-        {
-            "id": chunk_id,
-            "text": text,
-            "meta": meta,
-            "distance": distance,
-        }
-        for chunk_id, text, meta, distance in zip(
-            res["ids"][0],
-            res["documents"][0],
-            res["metadatas"][0],
-            res["distances"][0],
+    seen = {chunk["id"] for chunk in base_results}
+    expanded_results = list(base_results)
+
+    added = 0
+
+    for chunk_id, chunk_text, meta, distance in zip(
+        res["ids"][0],
+        res["documents"][0],
+        res["metadatas"][0],
+        res["distances"][0],
+    ):
+        if chunk_id in seen:
+            continue
+
+        expanded_results.append(
+            {
+                "id": chunk_id,
+                "text": chunk_text,
+                "meta": meta,
+                "distance": distance,
+            }
         )
-    ]
 
-    # Merge while preserving order and removing duplicates
-    seen = set()
-    expanded_results = []
+        seen.add(chunk_id)
+        added += 1
 
-    for result in base_results + extra_results:
-        if result["id"] not in seen:
-            seen.add(result["id"])
-            expanded_results.append(result)
+        if added >= extra_k:
+            break
 
     return expanded_results

@@ -4,3 +4,28 @@
 .chroma/
 data/raw/
 __pycache__/
+
+data/chat_history/
+
+# Local development backups
+*.bak
+*.before_*
+*.alignment_backup
+*.background_backup
+*.card_layout_backup
+*.cards_backup
+*.premium_backup
+*.typography_backup
+*_backup.py
+*.backup
+
+# Local evaluation context artifacts
+eval/chunk_catalog.txt
+eval/chunk_catalog.md
+eval/answer_judge_full_context.jsonl
+eval/answer_judge_extended_input.jsonl
+
+# Generated evaluation answers and contexts
+eval/answer_evaluation_context.jsonl
+eval/holdout_answers.jsonl
+eval/answer_evaluation_report.md

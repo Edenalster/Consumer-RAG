@@ -1,0 +1,1153 @@
+{
+  "created_at": "2026-10-25T09:30:00.457507+00:00",
+  "strategy": "fusion_llm_boosted",
+  "total_questions": 50,
+  "indexed_chunks": 86,
+  "retrieval_evaluable": 42,
+  "no_labeled_relevant_chunks": 8,
+  "answerability_distribution": {
+    "supported": 37,
+    "unsupported": 12,
+    "partial": 1
+  },
+  "metrics": {
+    "hit_rate_at_1": 0.5476190476190477,
+    "hit_rate_at_3": 0.7619047619047619,
+    "hit_rate_at_5": 0.8333333333333334,
+    "recall_at_5": 0.5813492063492064,
+    "mrr_at_5": 0.6567460317460317
+  },
+  "questions": [
+    {
+      "id": "H01",
+      "question": "נציג הגיע אליי למשרד והציע לי לקנות שואב אבק. חתמתי על העסקה במקום, אבל עכשיו אני רוצה להתחרט. מה הזכויות שלי?",
+      "answerability": "supported",
+      "category": "עסקה ברוכלות",
+      "relevant": [
+        "cancel-doorstep::000",
+        "cancel-doorstep::001",
+        "cancel-doorstep::003",
+        "cancel-doorstep::004"
+      ],
+      "retrieved": [
+        "cancel-doorstep::003",
+        "cancel-doorstep::012",
+        "cancel-doorstep::013",
+        "cancel-doorstep::007",
+        "cancel-doorstep::011"
+      ],
+      "first_relevant_rank": 1,
+      "hit_rate_at_1": 1,
+      "hit_rate_at_3": 1,
+      "hit_rate_at_5": 1,
+      "recall_at_5": 0.25,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "H02",
+      "question": "רכשתי מוצר מנציג שהגיע לביתי. האם אני חייבת לשלוח מכתב בדואר רשום כדי לבטל את העסקה?",
+      "answerability": "supported",
+      "category": "עסקה ברוכלות",
+      "relevant": [
+        "cancel-doorstep::004"
+      ],
+      "retrieved": [
+        "cancel-doorstep::004",
+        "cancel-doorstep::012",
+        "cancel-doorstep::011",
+        "cancel-doorstep::001",
+        "cancel-doorstep::002"
+      ],
+      "first_relevant_rank": 1,
+      "hit_rate_at_1": 1,
+      "hit_rate_at_3": 1,
+      "hit_rate_at_5": 1,
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "H03",
+      "question": "קניתי נעליים בחנות לפני כמה ימים, והקופסה עדיין סגורה. האם אוכל לקבל החזר כספי?",
+      "answerability": "supported",
+      "category": "ביטול עסקה בחנות",
+      "relevant": [
+        "cancel-in-store::002",
+        "cancel-in-store::003",
+        "cancel-in-store::016"
+      ],
+      "retrieved": [
+        "cancel-in-store::016",
+        "cancel-in-store::017",
+        "cancel-in-store::003",
+        "cancel-in-store::001",
+        "cancel-in-store::011"
+      ],
+      "first_relevant_rank": 1,
+      "hit_rate_at_1": 1,
+      "hit_rate_at_3": 1,
+      "hit_rate_at_5": 1,
+      "recall_at_5": 0.6666666666666666,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "H04",
+      "question": "רכשתי מוצר בחנות ואני רוצה לבטל את הקנייה, אבל איבדתי את הקבלה. האם יש דרך להוכיח את הרכישה?",
+      "answerability": "supported",
+      "category": "ביטול עסקה בחנות",
+      "relevant": [
+        "cancel-in-store::008",
+        "cancel-in-store::017"
+      ],
+      "retrieved": [
+        "cancel-in-store::017",
+        "cancel-in-store::000",
+        "cancel-in-store::001",
+        "cancel-in-store::008",
+        "cancel-in-store::003"
+      ],
+      "first_relevant_rank": 1,
+      "hit_rate_at_1": 1,
+      "hit_rate_at_3": 1,
+      "hit_rate_at_5": 1,
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "H05",
+      "question": "ביקשתי מחברת שירות להפסיק את המנוי שלי, אבל היא ממשיכה לחייב אותי. האם מותר לה?",
+      "answerability": "supported",
+      "category": "עסקה מתמשכת",
+      "relevant": [
+        "cancel-ongoing::001",
+        "cancel-ongoing::005",
+        "cancel-ongoing::006"
+      ],
+      "retrieved": [
+        "cancel-ongoing::001",
+        "cancel-ongoing::005",
+        "cancel-ongoing::000",
+        "cancel-ongoing::003",
+        "cancel-ongoing::008"
+      ],
+      "first_relevant_rank": 1,
+      "hit_rate_at_1": 1,
+      "hit_rate_at_3": 1,
+      "hit_rate_at_5": 1,
+      "recall_at_5": 0.6666666666666666,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "H06",
+      "question": "אני רוצה להתנתק משירות שאני משלמת עליו בכל חודש. תוך כמה זמן החברה צריכה להפסיק את החיובים?",
+      "answerability": "supported",
+      "category": "עסקה מתמשכת",
+      "relevant": [
+        "cancel-ongoing::001",
+        "cancel-ongoing::005"
+      ],
+      "retrieved": [
+        "cancel-ongoing::005",
+        "cancel-ongoing::001",
+        "cancel-ongoing::000",
+        "cancel-ongoing::003",
+        "cancel-ongoing::002"
+      ],
+      "first_relevant_rank": 1,
+      "hit_rate_at_1": 1,
+      "hit_rate_at_3": 1,
+      "hit_rate_at_5": 1,
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "H07",
+      "question": "הזמנתי מוצר בטלפון, אבל החלטתי לבטל לפני שהוא הגיע אליי. האם אפשר?",
+      "answerability": "supported",
+      "category": "עסקת מכר מרחוק",
+      "relevant": [
+        "cancel-online::001",
+        "cancel-online::003",
+        "cancel-online::008"
+      ],
+      "retrieved": [
+        "cancel-online::003",
+        "cancel-online::000",
+        "cancel-online::014",
+        "remote-sale::004",
+        "cancel-online::002"
+      ],
+      "first_relevant_rank": 1,
+      "hit_rate_at_1": 1,
+      "hit_rate_at_3": 1,
+      "hit_rate_at_5": 1,
+      "recall_at_5": 0.3333333333333333,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "H08",
+      "question": "קניתי מוצר באתר ישראלי והוא הגיע פגום. האם מותר לחנות לגבות ממני דמי ביטול?",
+      "answerability": "supported",
+      "category": "עסקת מכר מרחוק",
+      "relevant": [
+        "cancel-online::009",
+        "cancel-online::011",
+        "cancellation-fees::002"
+      ],
+      "retrieved": [
+        "cancel-online::011",
+        "cancel-online::001",
+        "cancel-online::002",
+        "cancellation-fees::002",
+        "cancel-online::000"
+      ],
+      "first_relevant_rank": 1,
+      "hit_rate_at_1": 1,
+      "hit_rate_at_3": 1,
+      "hit_rate_at_5": 1,
+      "recall_at_5": 0.6666666666666666,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "H09",
+      "question": "ביטלתי עסקה שמותר לבטל לפי החוק. איך מחשבים את דמי הביטול המקסימליים?",
+      "answerability": "supported",
+      "category": "לא ידוע",
+      "relevant": [
+        "cancellation-fees::000",
+        "cancellation-fees::003"
+      ],
+      "retrieved": [
+        "cancellation-fees::003",
+        "cancellation-fees::000",
+        "cancellation-fees::001",
+        "cancel-in-store::014",
+        "cancel-online::011"
+      ],
+      "first_relevant_rank": 1,
+      "hit_rate_at_1": 1,
+      "hit_rate_at_3": 1,
+      "hit_rate_at_5": 1,
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "H10",
+      "question": "בית העסק רוצה לגבות ממני גם דמי ביטול וגם עמלת סליקה. האם זה מותר?",
+      "answerability": "supported",
+      "category": "לא ידוע",
+      "relevant": [
+        "cancel-in-store::014",
+        "cancellation-fees::001"
+      ],
+      "retrieved": [
+        "cancel-in-store::014",
+        "cancellation-fees::001",
+        "cancel-online::011",
+        "cancel-doorstep::007",
+        "cancel-in-store::000"
+      ],
+      "first_relevant_rank": 1,
+      "hit_rate_at_1": 1,
+      "hit_rate_at_3": 1,
+      "hit_rate_at_5": 1,
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "H11",
+      "question": "הזמנתי מוצר שיוצר במיוחד לפי המידות שביקשתי. האם אוכל לבטל את ההזמנה?",
+      "answerability": "supported",
+      "category": "לא ידוע",
+      "relevant": [
+        "cancel-doorstep::002",
+        "cancel-online::002",
+        "cannot-cancel::002"
+      ],
+      "retrieved": [
+        "cancel-online::002",
+        "cancel-in-store::003",
+        "cancel-online::014",
+        "cannot-cancel::002",
+        "cancel-in-store::006"
+      ],
+      "first_relevant_rank": 1,
+      "hit_rate_at_1": 1,
+      "hit_rate_at_3": 1,
+      "hit_rate_at_5": 1,
+      "recall_at_5": 0.6666666666666666,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "H12",
+      "question": "קניתי מוצר מזון שמתקלקל במהירות. האם קיימת זכות לבטל את העסקה רק כי התחרטתי?",
+      "answerability": "supported",
+      "category": "לא ידוע",
+      "relevant": [
+        "cancel-doorstep::002",
+        "cancel-online::002",
+        "cannot-cancel::002"
+      ],
+      "retrieved": [
+        "cancel-online::001",
+        "cannot-cancel::002",
+        "cancel-in-store::001",
+        "cancel-ongoing::002",
+        "cancel-doorstep::000"
+      ],
+      "first_relevant_rank": 2,
+      "hit_rate_at_1": 0,
+      "hit_rate_at_3": 1,
+      "hit_rate_at_5": 1,
+      "recall_at_5": 0.3333333333333333,
+      "reciprocal_rank": 0.5
+    },
+    {
+      "id": "H13",
+      "question": "חנות מסרבת לכבד את זכויות הביטול שלי. לאיזה גוף ממשלתי אפשר להגיש תלונה?",
+      "answerability": "supported",
+      "category": "לא ידוע",
+      "relevant": [
+        "cancel-in-store::015",
+        "consumer-authority::002",
+        "consumer-authority::003"
+      ],
+      "retrieved": [
+        "cancel-doorstep::012",
+        "cancel-online::012",
+        "consumer-authority::003",
+        "cancel-in-store::015",
+        "cancel-doorstep::000"
+      ],
+      "first_relevant_rank": 3,
+      "hit_rate_at_1": 0,
+      "hit_rate_at_3": 1,
+      "hit_rate_at_5": 1,
+      "recall_at_5": 0.6666666666666666,
+      "reciprocal_rank": 0.3333333333333333
+    },
+    {
+      "id": "H14",
+      "question": "הגשתי תלונה לרשות להגנת הצרכן. האם הרשות יכולה להחזיר לי את הכסף באופן אישי?",
+      "answerability": "unsupported",
+      "category": "לא ידוע",
+      "relevant": [],
+      "retrieved": [
+        "cancel-online::012",
+        "consumer-authority::003",
+        "cancel-in-store::010",
+        "cancel-doorstep::012",
+        "cancel-in-store::015"
+      ],
+      "first_relevant_rank": null,
+      "hit_rate_at_1": 0,
+      "hit_rate_at_3": 0,
+      "hit_rate_at_5": 0,
+      "recall_at_5": null,
+      "reciprocal_rank": 0
+    },
+    {
+      "id": "H15",
+      "question": "האם חוק הגנת הצרכן חל גם על מצבים שבהם עסק מפרסם מידע מטעה על מוצר?",
+      "answerability": "supported",
+      "category": "לא ידוע",
+      "relevant": [
+        "consumer-authority::003",
+        "consumer-law::000"
+      ],
+      "retrieved": [
+        "consumer-law::000",
+        "consumer-law::002",
+        "consumer-law::003",
+        "cancel-in-store::015",
+        "remote-sale::005"
+      ],
+      "first_relevant_rank": 1,
+      "hit_rate_at_1": 1,
+      "hit_rate_at_3": 1,
+      "hit_rate_at_5": 1,
+      "recall_at_5": 0.5,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "H16",
+      "question": "מה ההבדל בין זכות לבטל עסקה בגלל שהתחרטתי לבין ביטול בעקבות הטעיה של בית העסק?",
+      "answerability": "supported",
+      "category": "לא ידוע",
+      "relevant": [
+        "cancel-doorstep::012",
+        "cancel-in-store::001",
+        "consumer-law::000"
+      ],
+      "retrieved": [
+        "cancel-in-store::001",
+        "cancel-ongoing::002",
+        "cancel-online::001",
+        "cancel-in-store::000",
+        "cancellation-fees::001"
+      ],
+      "first_relevant_rank": 1,
+      "hit_rate_at_1": 1,
+      "hit_rate_at_3": 1,
+      "hit_rate_at_5": 1,
+      "recall_at_5": 0.3333333333333333,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "H17",
+      "question": "ראיתי מוצר בפרסום והזמנתי אותו בשיחת טלפון בלי להגיע לחנות. האם זו עסקת מכר מרחוק?",
+      "answerability": "supported",
+      "category": "עסקת מכר מרחוק",
+      "relevant": [
+        "remote-sale::000",
+        "remote-sale::001"
+      ],
+      "retrieved": [
+        "cancel-online::000",
+        "cancel-online::003",
+        "remote-sale::000",
+        "remote-sale::001",
+        "remote-sale::005"
+      ],
+      "first_relevant_rank": 3,
+      "hit_rate_at_1": 0,
+      "hit_rate_at_3": 1,
+      "hit_rate_at_5": 1,
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 0.3333333333333333
+    },
+    {
+      "id": "H18",
+      "question": "קניתי מוצר באתר אינטרנט אבל אספתי אותו בעצמי מהחנות. האם העסקה נחשבת עסקת מכר מרחוק?",
+      "answerability": "partial",
+      "category": "עסקת מכר מרחוק",
+      "relevant": [
+        "remote-sale::000"
+      ],
+      "retrieved": [
+        "cancel-online::000",
+        "cancel-online::003",
+        "remote-sale::000",
+        "remote-sale::005",
+        "cancel-online::001"
+      ],
+      "first_relevant_rank": 3,
+      "hit_rate_at_1": 0,
+      "hit_rate_at_3": 1,
+      "hit_rate_at_5": 1,
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 0.3333333333333333
+    },
+    {
+      "id": "H19",
+      "question": "קניתי חולצה בחנות והורדתי את התווית, אבל לא לבשתי אותה. האם אפשר להחזיר?",
+      "answerability": "supported",
+      "category": "ביטול עסקה בחנות",
+      "relevant": [
+        "cancel-in-store::002",
+        "cancel-in-store::003"
+      ],
+      "retrieved": [
+        "cancel-in-store::001",
+        "cancel-in-store::003",
+        "cancel-in-store::016",
+        "cancel-in-store::017",
+        "cancel-in-store::006"
+      ],
+      "first_relevant_rank": 2,
+      "hit_rate_at_1": 0,
+      "hit_rate_at_3": 1,
+      "hit_rate_at_5": 1,
+      "recall_at_5": 0.5,
+      "reciprocal_rank": 0.5
+    },
+    {
+      "id": "H20",
+      "question": "קניתי מוצר במבצע סוף עונה. האם החנות יכולה לסרב לבטל את העסקה רק בגלל המבצע?",
+      "answerability": "unsupported",
+      "category": "לא ידוע",
+      "relevant": [],
+      "retrieved": [
+        "cannot-cancel::001",
+        "cancel-in-store::003",
+        "cancel-in-store::006",
+        "cancel-in-store::010",
+        "cannot-cancel::003"
+      ],
+      "first_relevant_rank": null,
+      "hit_rate_at_1": 0,
+      "hit_rate_at_3": 0,
+      "hit_rate_at_5": 0,
+      "recall_at_5": null,
+      "reciprocal_rank": 0
+    },
+    {
+      "id": "H21",
+      "question": "שילמתי על מוצר בכרטיס אשראי ואני רוצה החזר. האם החנות יכולה לתת לי רק זיכוי?",
+      "answerability": "supported",
+      "category": "לא ידוע",
+      "relevant": [
+        "cancel-in-store::009",
+        "cancel-in-store::011",
+        "cancel-in-store::012",
+        "cancel-in-store::016"
+      ],
+      "retrieved": [
+        "cancel-in-store::016",
+        "cancel-in-store::011",
+        "cancel-in-store::012",
+        "cancel-doorstep::008",
+        "cancel-in-store::013"
+      ],
+      "first_relevant_rank": 1,
+      "hit_rate_at_1": 1,
+      "hit_rate_at_3": 1,
+      "hit_rate_at_5": 1,
+      "recall_at_5": 0.75,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "H22",
+      "question": "קניתי מוצר בחנות והמוכר לא נתן לי קבלה. האם זה מונע ממני לבטל את העסקה?",
+      "answerability": "supported",
+      "category": "ביטול עסקה בחנות",
+      "relevant": [
+        "cancel-in-store::008"
+      ],
+      "retrieved": [
+        "cancel-in-store::017",
+        "cancel-in-store::001",
+        "cancel-in-store::000",
+        "cancel-in-store::006",
+        "cannot-cancel::001"
+      ],
+      "first_relevant_rank": null,
+      "hit_rate_at_1": 0,
+      "hit_rate_at_3": 0,
+      "hit_rate_at_5": 0,
+      "recall_at_5": 0.0,
+      "reciprocal_rank": 0
+    },
+    {
+      "id": "H23",
+      "question": "קניתי נעליים ומדדתי אותן בבית. האם עדיין אפשר להחזיר אותן?",
+      "answerability": "supported",
+      "category": "לא ידוע",
+      "relevant": [
+        "cancel-in-store::002",
+        "cancel-in-store::003"
+      ],
+      "retrieved": [
+        "cancel-in-store::016",
+        "cancel-in-store::003",
+        "cancel-in-store::017",
+        "cancel-in-store::001",
+        "cancel-in-store::006"
+      ],
+      "first_relevant_rank": 2,
+      "hit_rate_at_1": 0,
+      "hit_rate_at_3": 1,
+      "hit_rate_at_5": 1,
+      "recall_at_5": 0.5,
+      "reciprocal_rank": 0.5
+    },
+    {
+      "id": "H24",
+      "question": "הזמנתי מוצר מאתר ישראלי והוא עדיין לא נשלח. איך אפשר לבטל את ההזמנה?",
+      "answerability": "supported",
+      "category": "עסקת מכר מרחוק",
+      "relevant": [
+        "cancel-online::003",
+        "cancel-online::008"
+      ],
+      "retrieved": [
+        "cancel-online::003",
+        "cancel-online::002",
+        "cancel-online::014",
+        "cancel-online::000",
+        "cancel-online::015"
+      ],
+      "first_relevant_rank": 1,
+      "hit_rate_at_1": 1,
+      "hit_rate_at_3": 1,
+      "hit_rate_at_5": 1,
+      "recall_at_5": 0.5,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "H25",
+      "question": "קניתי מוצר באינטרנט והוא הגיע בצבע שונה מזה שהזמנתי. האם מותר לגבות ממני דמי ביטול?",
+      "answerability": "supported",
+      "category": "עסקת מכר מרחוק",
+      "relevant": [
+        "cancel-online::009",
+        "cancel-online::011"
+      ],
+      "retrieved": [
+        "cancel-online::001",
+        "cancel-online::011",
+        "cancellation-fees::002",
+        "cancellation-fees::001",
+        "cancel-online::002"
+      ],
+      "first_relevant_rank": 2,
+      "hit_rate_at_1": 0,
+      "hit_rate_at_3": 1,
+      "hit_rate_at_5": 1,
+      "recall_at_5": 0.5,
+      "reciprocal_rank": 0.5
+    },
+    {
+      "id": "H26",
+      "question": "הזמנתי מוצר באינטרנט ואני רוצה לבטל אחרי שקיבלתי אותו. ממתי סופרים את ימי הביטול?",
+      "answerability": "supported",
+      "category": "עסקת מכר מרחוק",
+      "relevant": [
+        "cancel-online::003",
+        "cancel-online::014"
+      ],
+      "retrieved": [
+        "cancel-online::014",
+        "cancel-online::003",
+        "cancel-online::004",
+        "cancel-online::015",
+        "cancel-online::000"
+      ],
+      "first_relevant_rank": 1,
+      "hit_rate_at_1": 1,
+      "hit_rate_at_3": 1,
+      "hit_rate_at_5": 1,
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "H27",
+      "question": "הזמנתי מוצר דרך הטלפון ולא קיבלתי מסמך עם פרטי העסקה. מה הזכויות שלי?",
+      "answerability": "supported",
+      "category": "עסקת מכר מרחוק",
+      "relevant": [
+        "cancel-online::003",
+        "remote-sale::003"
+      ],
+      "retrieved": [
+        "cancel-online::003",
+        "cancel-online::000",
+        "cancel-online::001",
+        "remote-sale::000",
+        "cancel-online::014"
+      ],
+      "first_relevant_rank": 1,
+      "hit_rate_at_1": 1,
+      "hit_rate_at_3": 1,
+      "hit_rate_at_5": 1,
+      "recall_at_5": 0.5,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "H28",
+      "question": "קניתי מוצר באתר אינטרנט, והחברה טוענת שאפשר לבטל רק דרך שירות הלקוחות בטלפון. האם זה חוקי?",
+      "answerability": "supported",
+      "category": "עסקת מכר מרחוק",
+      "relevant": [
+        "cancel-online::008"
+      ],
+      "retrieved": [
+        "cancel-online::001",
+        "cancel-online::003",
+        "cancel-online::000",
+        "cancel-online::002",
+        "remote-sale::004"
+      ],
+      "first_relevant_rank": null,
+      "hit_rate_at_1": 0,
+      "hit_rate_at_3": 0,
+      "hit_rate_at_5": 0,
+      "recall_at_5": 0.0,
+      "reciprocal_rank": 0
+    },
+    {
+      "id": "H29",
+      "question": "הזמנתי מוצר בהתאמה אישית דרך האינטרנט. האם יש לי זכות לבטל את העסקה?",
+      "answerability": "supported",
+      "category": "עסקת מכר מרחוק",
+      "relevant": [
+        "cancel-online::002"
+      ],
+      "retrieved": [
+        "cancel-online::003",
+        "cancel-online::000",
+        "cancel-online::001",
+        "remote-sale::004",
+        "cancel-online::014"
+      ],
+      "first_relevant_rank": null,
+      "hit_rate_at_1": 0,
+      "hit_rate_at_3": 0,
+      "hit_rate_at_5": 0,
+      "recall_at_5": 0.0,
+      "reciprocal_rank": 0
+    },
+    {
+      "id": "H30",
+      "question": "הזמנתי מוצר מאתר ישראלי, אבל הוא נשלח מחו״ל. אילו כללי ביטול חלים?",
+      "answerability": "unsupported",
+      "category": "עסקת מכר מרחוק",
+      "relevant": [
+        "cancel-online::002"
+      ],
+      "retrieved": [
+        "cancel-online::001",
+        "cancel-online::003",
+        "cancel-online::000",
+        "cancel-online::002",
+        "remote-sale::005"
+      ],
+      "first_relevant_rank": 4,
+      "hit_rate_at_1": 0,
+      "hit_rate_at_3": 0,
+      "hit_rate_at_5": 1,
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 0.25
+    },
+    {
+      "id": "H31",
+      "question": "נציג מכירות הגיע אליי הביתה ושכנע אותי לקנות מוצר. האם אני יכולה להתחרט?",
+      "answerability": "supported",
+      "category": "עסקה ברוכלות",
+      "relevant": [
+        "cancel-doorstep::000",
+        "cancel-doorstep::001",
+        "cancel-doorstep::003"
+      ],
+      "retrieved": [
+        "cancel-doorstep::001",
+        "cancel-doorstep::000",
+        "cancel-doorstep::012",
+        "cancel-doorstep::002",
+        "cancel-doorstep::004"
+      ],
+      "first_relevant_rank": 1,
+      "hit_rate_at_1": 1,
+      "hit_rate_at_3": 1,
+      "hit_rate_at_5": 1,
+      "recall_at_5": 0.6666666666666666,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "H32",
+      "question": "חתמתי על עסקה עם סוכן מכירות במקום העבודה. האם זו עסקה ברוכלות?",
+      "answerability": "supported",
+      "category": "עסקה ברוכלות",
+      "relevant": [
+        "cancel-doorstep::000",
+        "cancel-doorstep::001"
+      ],
+      "retrieved": [
+        "cancel-doorstep::012",
+        "cancel-doorstep::013",
+        "cancel-doorstep::000",
+        "cancel-doorstep::003",
+        "cancel-doorstep::002"
+      ],
+      "first_relevant_rank": 3,
+      "hit_rate_at_1": 0,
+      "hit_rate_at_3": 1,
+      "hit_rate_at_5": 1,
+      "recall_at_5": 0.5,
+      "reciprocal_rank": 0.3333333333333333
+    },
+    {
+      "id": "H33",
+      "question": "ביטלתי עסקה שנעשתה בבית שלי. מי צריך לשלם על החזרת המוצר?",
+      "answerability": "unsupported",
+      "category": "עסקה ברוכלות",
+      "relevant": [
+        "cancel-doorstep::006"
+      ],
+      "retrieved": [
+        "cancel-doorstep::012",
+        "cancel-doorstep::007",
+        "cancel-doorstep::008",
+        "cancel-doorstep::000",
+        "cancel-doorstep::001"
+      ],
+      "first_relevant_rank": null,
+      "hit_rate_at_1": 0,
+      "hit_rate_at_3": 0,
+      "hit_rate_at_5": 0,
+      "recall_at_5": 0.0,
+      "reciprocal_rank": 0
+    },
+    {
+      "id": "H34",
+      "question": "נציג מכירות הגיע אליי בלי הזמנה מראש. האם זה משפיע על זכות הביטול שלי?",
+      "answerability": "supported",
+      "category": "עסקה ברוכלות",
+      "relevant": [
+        "cancel-doorstep::000",
+        "cancel-doorstep::003"
+      ],
+      "retrieved": [
+        "cancel-doorstep::003",
+        "cancel-doorstep::000",
+        "cancel-doorstep::001",
+        "cancel-doorstep::012",
+        "cancel-doorstep::004"
+      ],
+      "first_relevant_rank": 1,
+      "hit_rate_at_1": 1,
+      "hit_rate_at_3": 1,
+      "hit_rate_at_5": 1,
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "H35",
+      "question": "נרשמתי לשירות חודשי מתחדש ואני רוצה להפסיק את החיובים. איך מבטלים?",
+      "answerability": "supported",
+      "category": "עסקה מתמשכת",
+      "relevant": [
+        "cancel-ongoing::000",
+        "cancel-ongoing::001",
+        "cancel-ongoing::004",
+        "cancel-ongoing::005"
+      ],
+      "retrieved": [
+        "cancel-ongoing::001",
+        "cancel-ongoing::005",
+        "cancel-ongoing::003",
+        "cancel-ongoing::000",
+        "cancel-ongoing::006"
+      ],
+      "first_relevant_rank": 1,
+      "hit_rate_at_1": 1,
+      "hit_rate_at_3": 1,
+      "hit_rate_at_5": 1,
+      "recall_at_5": 0.75,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "H36",
+      "question": "שלחתי בקשת ביטול למנוי אבל החברה ממשיכה לחייב אותי. מה אפשר לעשות?",
+      "answerability": "supported",
+      "category": "עסקה מתמשכת",
+      "relevant": [
+        "cancel-ongoing::001",
+        "cancel-ongoing::005",
+        "cancel-ongoing::006"
+      ],
+      "retrieved": [
+        "cancel-ongoing::001",
+        "cancel-ongoing::005",
+        "cancel-ongoing::000",
+        "cancel-ongoing::008",
+        "cancel-ongoing::003"
+      ],
+      "first_relevant_rank": 1,
+      "hit_rate_at_1": 1,
+      "hit_rate_at_3": 1,
+      "hit_rate_at_5": 1,
+      "recall_at_5": 0.6666666666666666,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "H37",
+      "question": "החברה אומרת שאפשר לבטל מנוי רק בסוף השנה. האם זה מותר?",
+      "answerability": "supported",
+      "category": "עסקה מתמשכת",
+      "relevant": [
+        "cancel-ongoing::003",
+        "cancel-ongoing::005"
+      ],
+      "retrieved": [
+        "cancel-ongoing::008",
+        "cancel-ongoing::001",
+        "cancel-ongoing::009",
+        "cancel-ongoing::003",
+        "cancel-ongoing::002"
+      ],
+      "first_relevant_rank": 4,
+      "hit_rate_at_1": 0,
+      "hit_rate_at_3": 0,
+      "hit_rate_at_5": 1,
+      "recall_at_5": 0.5,
+      "reciprocal_rank": 0.25
+    },
+    {
+      "id": "H38",
+      "question": "נרשמתי לשירות דרך האינטרנט ואני רוצה לבטל אותו אחרי חודש. האם חייבים להגיע פיזית לסניף?",
+      "answerability": "supported",
+      "category": "עסקה מתמשכת",
+      "relevant": [
+        "cancel-ongoing::004"
+      ],
+      "retrieved": [
+        "cancel-ongoing::001",
+        "cancel-ongoing::005",
+        "cancel-ongoing::000",
+        "cancel-ongoing::003",
+        "cancel-ongoing::007"
+      ],
+      "first_relevant_rank": null,
+      "hit_rate_at_1": 0,
+      "hit_rate_at_3": 0,
+      "hit_rate_at_5": 0,
+      "recall_at_5": 0.0,
+      "reciprocal_rank": 0
+    },
+    {
+      "id": "H39",
+      "question": "קניתי מכשיר חשמלי שהתקלקל בתקופת האחריות. למי צריך לפנות?",
+      "answerability": "unsupported",
+      "category": "לא ידוע",
+      "relevant": [],
+      "retrieved": [
+        "cancel-ongoing::005",
+        "cannot-cancel::002",
+        "cancel-in-store::016",
+        "cancel-in-store::003",
+        "cancel-in-store::001"
+      ],
+      "first_relevant_rank": null,
+      "hit_rate_at_1": 0,
+      "hit_rate_at_3": 0,
+      "hit_rate_at_5": 0,
+      "recall_at_5": null,
+      "reciprocal_rank": 0
+    },
+    {
+      "id": "H40",
+      "question": "החנות מסרבת לטפל במוצר פגום וטוענת שאני חייבת לפנות ישירות ליבואן. מה הזכויות שלי?",
+      "answerability": "unsupported",
+      "category": "לא ידוע",
+      "relevant": [],
+      "retrieved": [
+        "cancel-in-store::000",
+        "cancel-doorstep::012",
+        "cancel-in-store::003",
+        "cancel-in-store::006",
+        "cancellation-fees::002"
+      ],
+      "first_relevant_rank": null,
+      "hit_rate_at_1": 0,
+      "hit_rate_at_3": 0,
+      "hit_rate_at_5": 0,
+      "recall_at_5": null,
+      "reciprocal_rank": 0
+    },
+    {
+      "id": "H41",
+      "question": "קניתי מוצר חדש וגיליתי פגם ביום הראשון. האם אני חייבת להסכים לתיקון?",
+      "answerability": "unsupported",
+      "category": "לא ידוע",
+      "relevant": [
+        "cancel-in-store::014"
+      ],
+      "retrieved": [
+        "cancel-in-store::017",
+        "cancel-in-store::003",
+        "cancellation-fees::002",
+        "cancel-online::014",
+        "cancel-in-store::016"
+      ],
+      "first_relevant_rank": null,
+      "hit_rate_at_1": 0,
+      "hit_rate_at_3": 0,
+      "hit_rate_at_5": 0,
+      "recall_at_5": 0.0,
+      "reciprocal_rank": 0
+    },
+    {
+      "id": "H42",
+      "question": "מסרתי מוצר לתיקון במסגרת האחריות והוא לא הוחזר בזמן. מה אפשר לעשות?",
+      "answerability": "unsupported",
+      "category": "לא ידוע",
+      "relevant": [],
+      "retrieved": [
+        "cancel-online::012",
+        "cancel-doorstep::012",
+        "cancel-ongoing::005",
+        "cancel-in-store::016",
+        "cancel-online::009"
+      ],
+      "first_relevant_rank": null,
+      "hit_rate_at_1": 0,
+      "hit_rate_at_3": 0,
+      "hit_rate_at_5": 0,
+      "recall_at_5": null,
+      "reciprocal_rank": 0
+    },
+    {
+      "id": "H43",
+      "question": "קניתי מוצר משומש מאדם פרטי. האם חלות עליי אותן זכויות ביטול כמו בקנייה מחנות?",
+      "answerability": "supported",
+      "category": "לא ידוע",
+      "relevant": [
+        "consumer-authority::000"
+      ],
+      "retrieved": [
+        "cancel-in-store::009",
+        "cancel-in-store::003",
+        "cancel-in-store::000",
+        "cancel-online::001",
+        "cancel-ongoing::002"
+      ],
+      "first_relevant_rank": null,
+      "hit_rate_at_1": 0,
+      "hit_rate_at_3": 0,
+      "hit_rate_at_5": 0,
+      "recall_at_5": 0.0,
+      "reciprocal_rank": 0
+    },
+    {
+      "id": "H44",
+      "question": "קיבלתי מוצר במתנה ואני רוצה להחליף אותו. האם אני חייבת להציג קבלה?",
+      "answerability": "unsupported",
+      "category": "לא ידוע",
+      "relevant": [
+        "cancel-in-store::008",
+        "cancel-in-store::017"
+      ],
+      "retrieved": [
+        "cancel-in-store::017",
+        "cancel-online::014",
+        "cancel-ongoing::008",
+        "cancel-in-store::009",
+        "cancel-in-store::008"
+      ],
+      "first_relevant_rank": 1,
+      "hit_rate_at_1": 1,
+      "hit_rate_at_3": 1,
+      "hit_rate_at_5": 1,
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "H45",
+      "question": "רכשתי מוצר ביריד מכירות זמני. האם יש לי זכות לבטל את העסקה?",
+      "answerability": "unsupported",
+      "category": "לא ידוע",
+      "relevant": [],
+      "retrieved": [
+        "cancel-in-store::006",
+        "cancel-in-store::003",
+        "cancel-in-store::001",
+        "cancel-in-store::004",
+        "cannot-cancel::001"
+      ],
+      "first_relevant_rank": null,
+      "hit_rate_at_1": 0,
+      "hit_rate_at_3": 0,
+      "hit_rate_at_5": 0,
+      "recall_at_5": null,
+      "reciprocal_rank": 0
+    },
+    {
+      "id": "H46",
+      "question": "קניתי מוצר בחנות והמוכר אמר שאין החזרות בכלל. האם שלט כזה מבטל את הזכויות שלי?",
+      "answerability": "supported",
+      "category": "ביטול עסקה בחנות",
+      "relevant": [
+        "cancel-in-store::000",
+        "consumer-law::002"
+      ],
+      "retrieved": [
+        "cancel-in-store::009",
+        "cancel-in-store::001",
+        "cancel-in-store::017",
+        "cancel-in-store::000",
+        "cancel-in-store::014"
+      ],
+      "first_relevant_rank": 4,
+      "hit_rate_at_1": 0,
+      "hit_rate_at_3": 0,
+      "hit_rate_at_5": 1,
+      "recall_at_5": 0.5,
+      "reciprocal_rank": 0.25
+    },
+    {
+      "id": "H47",
+      "question": "הזמנתי מוצר באינטרנט, אבל עברו שבועיים והוא לא הגיע. האם אפשר לבטל?",
+      "answerability": "supported",
+      "category": "עסקת מכר מרחוק",
+      "relevant": [
+        "cancel-online::003",
+        "cancel-online::011"
+      ],
+      "retrieved": [
+        "cancel-online::003",
+        "cancel-online::014",
+        "cancel-online::000",
+        "cancel-online::001",
+        "remote-sale::000"
+      ],
+      "first_relevant_rank": 1,
+      "hit_rate_at_1": 1,
+      "hit_rate_at_3": 1,
+      "hit_rate_at_5": 1,
+      "recall_at_5": 0.5,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "H48",
+      "question": "רכשתי מוצר דיגיטלי להורדה ואני מתחרטת. האם חלים עליו כללי ביטול רגילים?",
+      "answerability": "supported",
+      "category": "לא ידוע",
+      "relevant": [
+        "cancel-online::002"
+      ],
+      "retrieved": [
+        "cancel-online::001",
+        "cancel-online::002",
+        "cancel-in-store::001",
+        "cancel-in-store::003",
+        "cancel-in-store::017"
+      ],
+      "first_relevant_rank": 2,
+      "hit_rate_at_1": 0,
+      "hit_rate_at_3": 1,
+      "hit_rate_at_5": 1,
+      "recall_at_5": 1.0,
+      "reciprocal_rank": 0.5
+    },
+    {
+      "id": "H49",
+      "question": "כמה ימי חופשה מגיעים לי בעבודה אם אני מועסקת בחצי משרה?",
+      "answerability": "unsupported",
+      "category": "לא ידוע",
+      "relevant": [],
+      "retrieved": [
+        "cancel-online::015",
+        "cancel-online::014",
+        "cancel-online::004",
+        "cancel-online::005",
+        "cancel-in-store::006"
+      ],
+      "first_relevant_rank": null,
+      "hit_rate_at_1": 0,
+      "hit_rate_at_3": 0,
+      "hit_rate_at_5": 0,
+      "recall_at_5": null,
+      "reciprocal_rank": 0
+    },
+    {
+      "id": "H50",
+      "question": "האם בעל הדירה שלי יכול להעלות את שכר הדירה באמצע חוזה?",
+      "answerability": "unsupported",
+      "category": "לא ידוע",
+      "relevant": [],
+      "retrieved": [
+        "cancel-ongoing::006",
+        "cancel-ongoing::001",
+        "cancel-doorstep::012",
+        "cancel-in-store::001",
+        "cancel-in-store::006"
+      ],
+      "first_relevant_rank": null,
+      "hit_rate_at_1": 0,
+      "hit_rate_at_3": 0,
+      "hit_rate_at_5": 0,
+      "recall_at_5": null,
+      "reciprocal_rank": 0
+    }
+  ]
+}

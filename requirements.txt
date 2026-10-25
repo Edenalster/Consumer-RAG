@@ -6,3 +6,6 @@ chromadb
 sentence-transformers
 rank-bm25
 google-genai
+fastapi
+uvicorn
+streamlit
