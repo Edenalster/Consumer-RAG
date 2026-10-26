@@ -22,6 +22,20 @@ The project was developed as a practical exploration of RAG architecture, retrie
 - FastAPI backend and Streamlit chat interface
 - Automated retrieval evaluation and answer-quality testing
 
+## Application Screenshots
+
+### Home Screen
+
+A Hebrew-first interface with suggested questions about consumer rights in Israel.
+
+![Consumer-RAG Home Screen](assets/screenshots/home.png)
+
+### AI-Generated Answer with Sources
+
+A grounded Hebrew answer with references and direct links to the supporting sources.
+
+![Consumer-RAG Answer with Sources](assets/screenshots/answer.png)
+
 ## Architecture
 
 ```text
